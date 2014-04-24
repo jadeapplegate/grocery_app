@@ -1,0 +1,10 @@
+<h1>Create a Grocery Item</h1>
+<%= form_for @grocery do |f| %>
+
+  <%= label_tag(:item, "Item") %>
+  <%= f.text_field :item , :class => "form-control" %></br>
+
+  <%= label_tag(:details, "Details") %> 
+  <%= f.text_area :details %></br>
+  <%= f.submit "Create" %>
+<% end %>
