@@ -2,11 +2,15 @@
 
 h1 {
     text-align: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
+    background-color: #928F80;
+    color: white;
 }
 
 body {
 	background-color: #7CCBCD;
 	background-size: 100%;
   margin: 0;
+  background-image: url(shopping_cart.png);
+  background-size: 350px;
 }
