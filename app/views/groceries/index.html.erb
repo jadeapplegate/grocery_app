@@ -1,11 +1,13 @@
-<h1> Welcome to your grocery list! </h1>
 
-<%= link_to "New Grocery Item", new_grocery_path, :class => "btn btn-success" %>
 
-<% @groceries.each do |grocery| %>
-    <li><%=link_to grocery.item, grocery_path(grocery.id) %>
-        <%= link_to "edit", edit_grocery_path(grocery[:id]), :class => "btn btn-warning" %>
-        <%= link_to "delete", grocery, method: :delete, data: { confirm: "Are you sure? No turning back!"}, :class => "btn btn-danger" %>
-        </li>
-<% end %>
+<%#= link_to "New Item", new_grocery_path, :class => "btn btn-success" %>
+<ul>
+	<% @groceries.each do |grocery| %>
+	  <li>
+	  	<%=link_to grocery.item, grocery_path(grocery.id), :class => "item col-lg-4" %>
+	    <%= link_to "edit", edit_grocery_path(grocery[:id]), :class => "btn btn-primary btn-xs" %>
+	    <%= link_to "delete", grocery, method: :delete, data: { confirm: "Are you sure? No turning back!"}, :class => "btn btn-primary btn-xs" %>
+	  </li>
+	<% end %>
+</ul>
 

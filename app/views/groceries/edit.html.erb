@@ -1,11 +1,11 @@
-<h1>Edit Your Grocery List!</h1>
+<h1>Edit Your Item:</h1></br>
 <%= form_for @grocery do |f| %>
 
-  <%= label_tag(:item, "Item:") %>
-  <%= f.text_field :item %></br>
+ <I><%= label_tag(:item, "Item:") %></I>
+  <%= f.text_field :item , :class => "form-control" %></br>
 
-  <%= label_tag(:details, "Details") %>
-  <%= f.text_area :details %></br>
+  <I><%= label_tag(:details, "Details:") %></I>
+  <%= f.text_area :details , :class => "form-control" %></br>
 
-  <%= f.submit "Update" %>
+  <%= f.submit "Update", :class => "btn btn-primary btn-default" %>
 <% end %>
